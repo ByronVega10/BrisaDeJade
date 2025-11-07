@@ -107,7 +107,9 @@ fun RegistroScreen(
         Button(
             onClick = {
                 if (viewModel.validarFormulario()) {
-                    navController.navigate(route = "resumen")
+                    navController.navigate("home"){
+                        popUpTo("registro") { inclusive=true }
+                    }
                 }
             },
             modifier = Modifier.fillMaxWidth()
